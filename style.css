@@ -1,0 +1,40 @@
+:root{
+  --panel-bg: #fff;
+  --accent: #ff5c8a;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#222;color:#111}
+#canvasWrap{width:900px;margin:18px auto;display:flex;justify-content:center}
+canvas{display:block;border:4px solid #111;background:#9fd3ff}
+
+/* HUD */
+#hud{width:900px;margin:8px auto;display:flex;justify-content:space-between;align-items:center;color:#fff;font-weight:600;gap:8px}
+#hud div{background:rgba(0,0,0,0.45);padding:8px 12px;border-radius:8px}
+#hud button{background:rgba(255,255,255,0.12);border:none;padding:6px 10px;border-radius:8px;cursor:pointer}
+
+/* Overlays (start, modal, gameover) */
+.overlay{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;background:rgba(0,0,0,0.55);z-index:50}
+.overlay.hidden{display:none}
+.panel{background:var(--panel-bg);color:#111;padding:18px;border-radius:12px;min-width:300px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.35)}
+.start-panel{background:transparent;border-radius:12px;padding:0}
+.start-panel h1{color:#fff;font-size:48px;margin-bottom:10px;text-shadow:0 6px 20px rgba(0,0,0,0.6)}
+.start-image{width:240px;cursor:pointer;display:block;margin:12px auto}
+.hint{color:#fff;margin-top:8px}
+.credit{color:#eee;font-size:12px;margin-top:6px}
+
+/* question inputs */
+#questionBox input{width:100%;padding:10px;margin-top:10px;font-size:16px}
+.btnRow{display:flex;gap:10px;justify-content:center;margin-top:12px}
+.btnRow button{padding:8px 14px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+
+/* gameover small tweak */
+#gameOver .panel{min-width:260px}
+
+/* responsive */
+@media (max-width:940px){
+  #canvasWrap{width:95%}
+  canvas{width:100%;height:auto}
+  #hud{width:95%}
+}
