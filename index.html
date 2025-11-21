@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEblox Game — Perfect Build</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="overlay">
+    <div class="panel start-panel">
+      <h1>NEblox Game</h1>
+      <img id="startBtn" src="assets/start-button.png" alt="Start" class="start-image" />
+      <div class="hint">Use ← → to move, ↑ or Space to jump</div>
+      <div class="credit">Made with ❤️ — Upload all files into <code>/assets/</code></div>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="score">Score: 0</div>
+    <div id="lives">Lives: 3</div>
+    <div id="hasKey">Key: ❌</div>
+    <button id="muteBtn" title="Toggle sound">🔊</button>
+  </div>
+
+  <!-- Canvas -->
+  <div id="canvasWrap">
+    <canvas id="gameCanvas" width="900" height="500"></canvas>
+  </div>
+
+  <!-- QUESTION MODAL -->
+  <div id="questionBox" class="overlay hidden">
+    <div class="panel">
+      <h2>Jawab Pertanyaan</h2>
+      <p id="questionText">...</p>
+      <input id="answerInput" placeholder="Jawaban..." />
+      <div class="btnRow">
+        <button id="submitAnswer">Kirim</button>
+        <button id="cancelAnswer">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="gameOver" class="overlay hidden">
+    <div class="panel">
+      <h2>Game Over</h2>
+      <div id="finalScore">Score: 0</div>
+      <div class="btnRow">
+        <button id="restartBtn">Main Lagi</button>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
